@@ -1,0 +1,18 @@
+<div class="semester">
+<div class="w3-content w3-container" style="max-width:1100px;margin-top:20px;margin-bottom:80px">
+  <div class="w3-section">
+<h1><b>Listing Semesters</b></h1>
+  </div>
+
+    <% @semesters.each do |semester| %>
+
+<div class="w3-third">
+  <a class="w3-btn w3-theme" <%= link_to semester.name, semester_subjects_path(semester.id) %></a>
+
+    </div>
+
+    <% end %>
+</div>
+
+ </div>
+<a class="w3-btn w3-theme"<%= link_to 'Back', :back%></a>
