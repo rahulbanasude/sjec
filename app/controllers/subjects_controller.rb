@@ -1,7 +1,8 @@
 class SubjectsController < ApplicationController
+  before_action :authenticate_user!
   def index
 
-    
+
 		semester = Semester.find(params[:semester_id])
 		@subjects = semester.subjects
 

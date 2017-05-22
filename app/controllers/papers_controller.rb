@@ -1,4 +1,5 @@
 class PapersController < ApplicationController
+  before_action :authenticate_user!
   def index
 
   		subject = Subject.find(params[:subject_id])

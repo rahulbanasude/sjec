@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  devise_for :users
   root to: 'departments#index'
   resources :departments, only: [:index], shallow: true do
 
