@@ -1,4 +1,5 @@
 class SemestersController < ApplicationController
+
   def index
     department = Department.find(params[:department_id])
     @semesters = department.semesters
@@ -15,8 +16,9 @@ class SemestersController < ApplicationController
   end
 
 
-
+private
   def semester_params
       params.require(:semester).permit(:name, :department_id)
     end
+
 end
