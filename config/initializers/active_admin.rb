@@ -6,7 +6,7 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Sjec"
   config.register_javascript 'subjects.js'
-  config.register_javascript 'papers.js'
+  config.register_javascript 'papers'
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
