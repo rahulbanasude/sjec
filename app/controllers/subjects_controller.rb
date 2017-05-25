@@ -3,7 +3,7 @@ class SubjectsController < ApplicationController
   def index
 
 
-		semester = Semester.find(params[:semester_id])
+		semester = Semester.friendly.find(params[:semester_id])
 		@subjects = semester.subjects
 
 	end
@@ -20,7 +20,7 @@ class SubjectsController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
-      @subject = Subject.find(params[:id])
+      @subject = Subject.friendly.find(params[:id])
     end
 
 

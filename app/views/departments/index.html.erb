@@ -1,16 +1,17 @@
-<div class="semester">
-<div class="w3-content w3-container" style="max-width:1100px;margin-top:20px;margin-bottom:80px">
-  <div class="w3-section">
-<h1><b>Listing Departments</b></h1>
-  </div>
 
-    <% @departments.each do |department| %>
-
-<div class="w3-third">
-  <a class="w3-btn w3-theme" <%= link_to department.name, department_semesters_path(department.id) %></a>
-
+  <div class="semester">
+  <div class="w3-content w3-container" style="max-width:1100px;margin-top:20px;margin-bottom:80px">
+    <div class="w3-section">
+  <h1><b>Listing Departments</b></h1>
     </div>
 
-    <% end %>
-</div>
- </div>
+      <% @departments.each do |department| %>
+
+  <div class="w3-third">
+    <a class="w3-btn w3-theme" <%= link_to department.name, department_semesters_path(department.id) %></a>
+
+      </div>
+
+      <% end %>
+  </div>
+   </div>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   devise_for :users
-  root to: 'departments#index'
+  root to: 'home#index'
   resources :departments, only: [:index], shallow: true do
 
 resources :semesters , only: [:index] do
