@@ -1,7 +1,7 @@
 class SemestersController < ApplicationController
 before_action :authenticate_user!
   def index
-    department = Department.friendly.find(params[:department_id])
+    department = Department.find(params[:department_id])
     @semesters = department.semesters
 
   end

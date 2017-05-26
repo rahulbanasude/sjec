@@ -3,7 +3,7 @@ class SubjectsController < ApplicationController
   def index
 
 
-		semester = Semester.friendly.find(params[:semester_id])
+		semester = Semester.find(params[:semester_id])
 		@subjects = semester.subjects
 
 	end
