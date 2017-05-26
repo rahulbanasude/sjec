@@ -2,7 +2,7 @@ class SemestersController < ApplicationController
 before_action :authenticate_user!
   def index
     department = Department.find(params[:department_id])
-    @semesters = department.semesters
+    @semesters = department.semesters.order('name ASC')
 
   end
 
