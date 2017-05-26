@@ -4,35 +4,23 @@
     <title>Sjec</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-
   <body>
-  <div id="main_content">
-    <div id="header">
-      <p>SJEC</p>
-      <% if user_signed_in? %>
 
+  <%= render '/layouts/nav'%>
 
-          <%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "buttons button"%>
-
-<% else%>
-
-    <%= link_to "Student Login", new_user_session_path, class: "buttons button" %>
-
-  <% end %>
-    </div>
-    <% flash.each do |name, msg| %>
-    <% content_tag(:div, msg, class: "alert") %>
-  	<% end %>
   <%= yield %>
+
   </div>
 
 
 
 
   </body>
+
 </html>
