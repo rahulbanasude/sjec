@@ -33,7 +33,7 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-background-image: asset-url(/assets/sjec_campus.jpeg) !important; 
+background-image: asset-url('sjec_campus.jpeg'); 
     min-height: 100%;
 }
 .w3-bar .w3-button {
