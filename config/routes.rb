@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
-
+  get 'home/about'
   devise_for :users
   root to: 'home#index'
   resources :departments, only: [:index], shallow: true do
