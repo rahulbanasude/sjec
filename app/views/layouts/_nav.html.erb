@@ -7,6 +7,15 @@
       <a href="/" class="w3-bar-item w3-button">HOME</a>
       <a href="/home/about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT</a>
       <a href="/departments" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PAPERS</a>
+      <% if user_signed_in? %>
+
+  <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"w3-bar-item w3-button") %>
+
+<% else %>
+
+  <%= link_to('Login', new_user_session_path, class:"w3-bar-item w3-button")  %>
+
+<% end %>
 
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
