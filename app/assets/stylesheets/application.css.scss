@@ -17,7 +17,10 @@
   @import "w3";
   @import "w3-theme";
 
-
+.banner_image{
+  width: 100%;
+  height: 200px;
+}
 
 a{
   text-decoration: none !important;
@@ -50,7 +53,7 @@ p{
 }
 }
 .login{
-  margin-top: 6em;
+  margin-top: 2em;
 }
 .about_us{
   margin-top: 6em;
